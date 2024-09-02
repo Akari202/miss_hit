@@ -7,10 +7,19 @@ In newlines.m, line 1
 |          ^^^^^^^^ style: Could not find any copyright notice [copyright_notice]
 In newlines.m, line 3
 |         x, y; z
+|         ^ style: violates naming scheme for attribute [naming_functions]
+In newlines.m, line 3
+|         x, y; z
 |          ^ style: end this with just a newline [fixed] [end_of_statements]
 In newlines.m, line 3
 |         x, y; z
 |             ^ style: end this with just a newline [fixed] [end_of_statements]
+In newlines.m, line 4
+|         x, y; z
+|            ^ style: violates naming scheme for attribute [naming_functions]
+In newlines.m, line 5
+|         x, y; z
+|               ^ style: violates naming scheme for attribute [naming_functions]
 other.m: style: violates naming scheme for scripts [naming_scripts]
 In other.m, line 12
 | function out = foo(in)
@@ -145,7 +154,7 @@ In test.m, line 7
 In test.m, line 9
 | spoon
 | ^^^^^ style: end statement with a semicolon [fixed] [end_of_statements]
-MISS_HIT Style Summary: 3 file(s) analysed, 50 style issue(s)
+MISS_HIT Style Summary: 3 file(s) analysed, 53 style issue(s)
 
 === HTML MODE ===
-MISS_HIT Style Summary: 3 file(s) analysed, 50 style issue(s)
+MISS_HIT Style Summary: 3 file(s) analysed, 53 style issue(s)

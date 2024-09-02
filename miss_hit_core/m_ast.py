@@ -3,7 +3,7 @@
 ##                                                                          ##
 ##          MATLAB Independent, Small & Safe, High Integrity Tools          ##
 ##                                                                          ##
-##              Copyright (C) 2019-2022, Florian Schanda                    ##
+##              Copyright (C) 2019-2024, Florian Schanda                    ##
 ##                                                                          ##
 ##  This file is part of MISS_HIT.                                          ##
 ##                                                                          ##
@@ -753,6 +753,9 @@ class Class_Definition(Definition):
         assert isinstance(cfg, Config)
         if cfg.active("naming_classes"):
             self.n_name.sty_check_naming(mh, cfg, "class", "naming_classes")
+        for n_block in self.l_properties:
+            for n_prop in n_block.l_items:
+                n_prop.sty_check_naming(mh, cfg)
         for n_block in self.l_methods:
             for n_function in n_block.l_items:
                 n_function.sty_check_naming(mh, cfg)
@@ -1181,7 +1184,7 @@ class Function_Signature(Node):
                 raise ICE("class method with %s node as name" %
                           self.n_name.__class__.__name__)
             else:
-                self.n_name.n_field.sty_check_naming(mh, cfg, "method",
+                self.n_name.n_field.sty_check_naming(mh, cfg, "attribute",
                                                      "naming_functions")
 
         else:
@@ -1451,6 +1454,17 @@ class Entity_Constraints(Node):
         if self.n_default_value:
             self.n_default_value.visit(self, function, "Default")
         self._visit_end(parent, function, relation)
+
+    def sty_check_naming(self, mh, cfg):
+        assert isinstance(mh, Message_Handler)
+        assert isinstance(cfg, Config)
+
+        if self.n_parent.kind() != "properties":
+            raise ICE("called naming check on %s block" % self.n_parent.kind())
+
+        if cfg.active("naming_functions"):
+            self.n_name.sty_check_naming(mh, cfg, "attribute",
+                                         "naming_functions")
 
 
 class Argument_Validation_Delegation(Node):

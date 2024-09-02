@@ -20,7 +20,9 @@ Not quite compatible with Octave yet. See #43 [octave support](https://github.co
 
 ### 0.9.44-dev
 
-
+* New configuration item `regex_attribute_name` for the
+  `naming_functions` rule. This can be used to enforce naming for
+  class attributes and the associated getters and setters.
 
 ### 0.9.43
 

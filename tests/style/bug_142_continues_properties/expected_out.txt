@@ -1,6 +1,9 @@
 === PLAIN MODE ===
 In Potato.m, line 6
 |         foo, ... comment1
+|         ^^^ style: violates naming scheme for attribute [naming_functions]
+In Potato.m, line 6
+|         foo, ... comment1
 |            ^ style: end this with just a newline [fixed] [end_of_statements]
 In Potato.m, line 6
 |         foo, ... comment1
@@ -13,6 +16,9 @@ In Potato.m, line 7
 |                     ^^^^^^^^^^^^^ style: useless line continuation [fixed] [useless_continuation]
 In Potato.m, line 8
 |         bar (1, 1), ... comment2
+|         ^^^ style: violates naming scheme for attribute [naming_functions]
+In Potato.m, line 8
+|         bar (1, 1), ... comment2
 |         ^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
 In Potato.m, line 8
 |         baz = 5; ... comment3
@@ -22,7 +28,13 @@ In Potato.m, line 8
 |                  ^^^^^^^^^^^^^ style: useless line continuation [fixed] [useless_continuation]
 In Potato.m, line 10
 |         baz = 5; ... comment3
+|         ^^^ style: violates naming scheme for attribute [naming_functions]
+In Potato.m, line 10
+|         baz = 5; ... comment3
 |         ^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
+In Potato.m, line 12
+|         bork single
+|         ^^^^ style: violates naming scheme for attribute [naming_functions]
 In Potato.m, line 12
 |         bork single
 |         ^^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
@@ -38,12 +50,18 @@ In Potato.m, line 13
 In Potato.m, line 13
 |         foo2,, ... comment1
 |                ^^^^^^^^^^^^^ style: useless line continuation [fixed] [useless_continuation]
+In Potato.m, line 16
+|         foo2,, ... comment1
+|         ^^^^ style: violates naming scheme for attribute [naming_functions]
 In Potato.m, line 14
 |         bar2 (1, 1), ... comment2
 |                    ^ style: end this with just a newline [fixed] [end_of_statements]
 In Potato.m, line 14
 |         bar2 (1, 1), ... comment2
 |                      ^^^^^^^^^^^^^ style: useless line continuation [fixed] [useless_continuation]
+In Potato.m, line 18
+|         bar2 (1, 1), ... comment2
+|         ^^^^ style: violates naming scheme for attribute [naming_functions]
 In Potato.m, line 18
 |         bar2 (1, 1), ... comment2
 |         ^^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
@@ -55,6 +73,9 @@ In Potato.m, line 16
 |                   ^^^^^^^^^^^^^ style: useless line continuation [fixed] [useless_continuation]
 In Potato.m, line 21
 |         baz2 = 5; ... comment4
+|         ^^^^ style: violates naming scheme for attribute [naming_functions]
+In Potato.m, line 21
+|         baz2 = 5; ... comment4
 |         ^^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
 In Potato.m, line 20
 |         ... comment3
@@ -64,23 +85,38 @@ In Potato.m, line 23
 |         ^^^^^^^^^^^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
 In Potato.m, line 24
 |         bork2 single
+|         ^^^^^ style: violates naming scheme for attribute [naming_functions]
+In Potato.m, line 24
+|         bork2 single
 |         ^^^^^ style: indentation not correct, should be 10 spaces, not 8 [fixed] [indentation]
 In Potato2.m, line 6
 | classdef Potato2
 |          ^^^^^^^ style: violates naming scheme for class [naming_classes]
+In Potato2.m, line 9
+|         foo
+|         ^^^ style: violates naming scheme for attribute [naming_functions]
 In Potato2.m, line 10
 |         ...
 |         ^^^^ style: useless line continuation [fixed] [useless_continuation]
+In Potato2.m, line 11
+|           bar (1, 1)
+|           ^^^ style: violates naming scheme for attribute [naming_functions]
 In Potato2.m, line 12
 |         ...
 |         ^^^^ style: useless line continuation [fixed] [useless_continuation]
+In Potato2.m, line 13
+|           baz = 5
+|           ^^^ style: violates naming scheme for attribute [naming_functions]
 In Potato2.m, line 14
 |         ...
 |         ^^^^ style: useless line continuation [fixed] [useless_continuation]
-MISS_HIT Style Summary: 2 file(s) analysed, 26 style issue(s)
+In Potato2.m, line 15
+|           bork single
+|           ^^^^ style: violates naming scheme for attribute [naming_functions]
+MISS_HIT Style Summary: 2 file(s) analysed, 38 style issue(s)
 
 === HTML MODE ===
-MISS_HIT Style Summary: 2 file(s) analysed, 26 style issue(s)
+MISS_HIT Style Summary: 2 file(s) analysed, 38 style issue(s)
 
 === ! BROKEN FIXES ! ===
 Fixing is not idempotent for ./Potato.m

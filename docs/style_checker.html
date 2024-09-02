@@ -949,7 +949,7 @@ end
 
       <div>
         This rule enforces a consistent naming for all user-defined
-        functions and methods.
+        functions, methods, getters, and setters.
       </div>
 
       <div>
@@ -970,6 +970,12 @@ end
             every class method must match. The default is
             <pre>[a-z]+(_[a-z]+)*</pre> This is all lower-case,
             underscore separated names.
+          </li>
+          <li>
+            <b>regex_attribute_name</b>: A regular expression that
+            every class attribute and associated getter/setter must
+            match. The default is the same as it is for classes. (See
+            above.)
           </li>
         </ul>
       </div>

@@ -1,0 +1,14 @@
+=== PLAIN MODE ===
+In test1.m, line 6
+|         kitten42
+|         ^^^^^^^^ style: violates naming scheme for attribute [naming_functions]
+In test1.m, line 15
+|         function set.kitten42(this, val)
+|                      ^^^^^^^^ style: violates naming scheme for attribute [naming_functions]
+In test1.m, line 19
+|         function set.wibble(this, val)
+|                      ^^^^^^ style: violates naming scheme for attribute [naming_functions]
+MISS_HIT Style Summary: 1 file(s) analysed, 3 style issue(s)
+
+=== HTML MODE ===
+MISS_HIT Style Summary: 1 file(s) analysed, 3 style issue(s)

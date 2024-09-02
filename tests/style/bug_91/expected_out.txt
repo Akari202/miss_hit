@@ -4,8 +4,14 @@ In foo.m, line 3
 |          ^^^ style: violates naming scheme for class [naming_classes]
 In foo.m, line 5
 |         x; % potato
+|         ^ style: violates naming scheme for attribute [naming_functions]
+In foo.m, line 5
+|         x; % potato
 |          ^ style: end this with just a newline [fixed] [end_of_statements]
-MISS_HIT Style Summary: 1 file(s) analysed, 2 style issue(s)
+In foo.m, line 6
+|         y  % potato
+|         ^ style: violates naming scheme for attribute [naming_functions]
+MISS_HIT Style Summary: 1 file(s) analysed, 4 style issue(s)
 
 === HTML MODE ===
-MISS_HIT Style Summary: 1 file(s) analysed, 2 style issue(s)
+MISS_HIT Style Summary: 1 file(s) analysed, 4 style issue(s)

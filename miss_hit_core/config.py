@@ -3,7 +3,7 @@
 ##                                                                          ##
 ##          MATLAB Independent, Small & Safe, High Integrity Tools          ##
 ##                                                                          ##
-##              Copyright (C) 2020-2022, Florian Schanda                    ##
+##              Copyright (C) 2020-2024, Florian Schanda                    ##
 ##                                                                          ##
 ##  This file is part of MISS_HIT.                                          ##
 ##                                                                          ##
@@ -379,7 +379,10 @@ STYLE_RULES = {
                 default = DEFAULT_NAMING_SCHEME),
             "regex_method_name" : Regex_Style_Configuration(
                 "Regex for class method names",
-                default = DEFAULT_LC_NAMING_SCHEME)
+                default = DEFAULT_LC_NAMING_SCHEME),
+            "regex_attribute_name" : Regex_Style_Configuration(
+                "Regex for class attributes",
+                default = DEFAULT_NAMING_SCHEME)
         }),
 
     "naming_parameters" : Style_Rule(
